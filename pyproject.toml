@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-os"
+version = "0.11.0"
+description = "零依赖的 agent 记忆与工具治理插件包 — 四档检索 + 工具审批沙箱 + 时间旅行"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "AGPL-3.0" }
+authors = [{ name = "Agent OS Contributors", email = "8148467@qq.com" }]
+keywords = [
+    "agent", "memory", "retrieval", "bm25", "semantic", "tools",
+    "sandbox", "workflow", "mcp", "llm", "token-optimization",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "mypy",
+    "pytest",
+]
+
+[project.urls]
+Homepage = "https://gitcode.com/tianci2026/agent-os"
+Repository = "https://gitcode.com/tianci2026/agent-os"
+Issues = "https://gitcode.com/tianci2026/agent-os/issues"
+Changelog = "https://gitcode.com/tianci2026/agent-os/blob/main/CHANGELOG.md"
+
+[project.scripts]
+agent-os-ui = "serve_ui:main"
+
+[tool.setuptools]
+packages = ["agent_os"]
+
+[tool.setuptools.package-data]
+agent_os = ["py.typed"]
